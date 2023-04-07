@@ -31,5 +31,3 @@
 **Storage:** Silicon Power P34A60 512GB (Windows) \
 **PSU:** Corsair RM750e 750w PSU \
 **OS:** Fedora 38 Workstation (Preview)
-
-*Commits prior to 52bb1b167612bbe0abbf63363b1ecb8d58ffe8b3 are dated 26/03/2023 due to me borking the repo and having to resign everything.*
