@@ -1,0 +1,6 @@
+# Automated setup and configuration for my personal linux machines
+# https://github.com/rainyskye/penguin
+
+git.user: User Name
+git.email: me@example.com
+linux.user: skye
