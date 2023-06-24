@@ -1,0 +1,25 @@
+- name: Setup Flatpak & Install Packages
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Flatpak - Add Flathub repository
+      community.general.flatpak_remote:
+        name: flathub
+        state: present
+        flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+
+
+    - name: Flatpak - Install multiple packages
+      community.general.flatpak:
+        name:
+          - com.spotify.Client # Spotify
+          - org.gabmus.hydrapaper # HydraPaper (Multi-Monitor Wallpaper Tool)
+          - com.discordapp.Discord # Discord
+          - com.github.tchx84.Flatseal # Flatseal (Flatpak Manager)
+          - org.qbittorrent.qBittorrent # qBittorrent
+          - org.signal.Signal # Signal Desktop
+          - org.telegram.desktop # Telegram Desktop
+          - io.mpv.Mpv # mpv (Video/Audio Player)
+          - com.rafaelmardojai.Blanket # Blanket (Noise Generator)
+          - org.prismlauncher.PrismLauncher # Prism Launcher (Minecraft)

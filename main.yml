@@ -1,0 +1,5 @@
+- name: rainyskye's Fedora Workstation Configuration
+
+  tasks:
+    - include: playbooks/dnf.yml
+    - include: playbooks/flatpak.yml
