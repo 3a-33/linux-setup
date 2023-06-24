@@ -1,8 +1,0 @@
-# Automated setup and configuration for my personal linux machines
-# https://github.com/rainyskye/penguin
-
-- name: Post-Reboot Steps
-  hosts: localhost
-  tasks:
-    - name: Enable dash-to-dock Extension
-      ansible.builtin.command: gnome-extensions enable dash-to-dock@micxgx.gmail.com
