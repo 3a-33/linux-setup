@@ -1,0 +1,83 @@
+- name: Setup DNF & Install Packages
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: DNF - Enable fastestmirror and set max_parallel_downloads to 10
+      ansible.builtin.lineinfile:
+        path: /etc/dnf/dnf.conf
+        regexp: "{{ item.regexp }}"
+        line: "{{ item.line }}"
+        mode: "0644"
+      loop:
+        - {regexp: '^fastestmirror', line: 'fastestmirror=True'}
+        - {regexp: '^max_parallel_downloads', line: 'max_parallel_downloads=10'}
+
+    - name: DNF - Enable the RPMFusion repository (free)
+      ansible.builtin.dnf:
+        name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+        state: present
+        # disable_gpg_check: true (might need)
+
+    - name: DNF - Enable the RPMFusion repository (nonfree)
+      ansible.builtin.dnf:
+        name: "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+        state: present
+        # disable_gpg_check: true (might need)
+
+    - name: DNF - Import 1Password RPM Key
+      ansible.builtin.rpm_key:
+        state: present
+        key: https://downloads.1password.com/linux/keys/1password.asc
+
+    - name: DNF - Add 1Password Repository
+      ansible.builtin.yum_repository:
+        name: 1Password
+        description: 1Password Stable Channel
+        baseurl: https://downloads.1password.com/linux/rpm/stable/$basearch
+
+    - name: Import VSCode RPM Key
+      ansible.builtin.rpm_key:
+        state: present
+        key: https://packages.microsoft.com/keys/microsoft.asc
+
+    - name: DNF - Add VSCode Repository
+      ansible.builtin.yum_repository:
+        name: Visual Studio Code
+        description: Visual Studio Code
+        baseurl: https://packages.microsoft.com/yumrepos/vscode
+
+    - name: DNF - Remove unwanted preinstalled Fedora packages
+      ansible.builtin.dnf:
+        name:
+          - totem # gnome videos
+          - gnome-maps
+          - gnome-calendar
+          - gnome-contacts
+          - gnome-clocks
+          - cheese # camera app
+          - cheese-libs # camera app libs?
+          - rhythmbox
+          - gnome-tour
+          - gnome-photos
+          - gnome-weather
+          - yelp # help app
+          - yelp-libs # help app libraries?
+          - libreoffice-calc
+          - libreoffice-core
+          - libreoffice-data
+          - libreoffice-emailmerge
+          - libreoffice-filters
+          - libreoffice-graphicfilter
+          - libreoffice-gtk3
+          - libreoffice-gtk4
+          - libreoffice-help-en
+          - libreoffice-impress
+          - libreoffice-langpack-en
+          - libreoffice-ogltrans
+          - libreoffice-opensymbol-fonts
+          - libreoffice-pdfimport
+          - libreoffice-pyuno
+          - libreoffice-writer
+          - libreoffice-xsltfilter
+        state: absent

@@ -10,4 +10,4 @@ echo "Note: If you have a fingerprint setup, using the become password will not 
 echo "==================================="
 sudo dnf update -y # Update all packages
 sudo dnf install python3 python3-pip # Install python3 and pip
-python3 -m pip install --user ansible # Also Install ansible-lint if using it for development?
+python3 -m pip install --user ansible ansible-lint # Install ansible and ansible-lint
