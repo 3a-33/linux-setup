@@ -5,14 +5,14 @@
 - [ ] Add Flathub repo for Flatpak
 - [ ] Configure Gnome
   - [ ] Install and Enable Extensions
-    - [ ] Dash to dock (https://extensions.gnome.org/extension/307/dash-to-dock/)
+    - [ ] Dash to dock - [Gnome Extensions](https://extensions.gnome.org/extension/307/dash-to-dock/)
     - [ ] Tray Icons
-      - AppIndicator and KStatusNotifierItem Support (https://extensions.gnome.org/extension/615/appindicator-support/)
+      - AppIndicator and KStatusNotifierItem Support - [Gnome Extensions](https://extensions.gnome.org/extension/615/appindicator-support/)
       - or
-      - Tray Icons: Reloaded (https://extensions.gnome.org/extension/2890/tray-icons-reloaded/)
-    - [ ] Blur My Shell (https://extensions.gnome.org/extension/3193/blur-my-shell/)
-    - [ ] Desktop Icons NG (DING) (https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
-    - [ ] Clipboard Indicator (https://extensions.gnome.org/extension/779/clipboard-indicator/)
+      - Tray Icons: Reloaded [Gnome Extensions](https://extensions.gnome.org/extension/2890/tray-icons-reloaded/)
+    - [ ] Blur My Shell - [Gnome Extensions](https://extensions.gnome.org/extension/3193/blur-my-shell/)
+    - [ ] Desktop Icons NG (DING) - [Gnome Extensions](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
+    - [ ] Clipboard Indicator - [Gnome Extensions](https://extensions.gnome.org/extension/779/clipboard-indicator/)
 - [ ] Per machine configuration/specifics (Main Desktop, Pixelbook Go, etc.)
   - [ ] Pixelbook Go
     - [ ] Audio Driver
