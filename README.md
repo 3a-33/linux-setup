@@ -22,7 +22,7 @@
   - [ ] ZSH as Default
   - [ ] OhMyZSH
   - [ ] Powerlevel10K?
-- [ ] Install Applications
+- [ ] Install Applications (Make it a configurable list?)
   - [ ] Firefox - DNF
     - [ ] (if possible) Automate configutation (Extensions, Privacy/Hardening Settings, etc.)
   - [ ] Spotify - Flatpak
