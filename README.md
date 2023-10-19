@@ -4,6 +4,7 @@
 - [ ] Remove all unused default Fedora programs (DNF and Flatpak)
 - [ ] Add Flathub repo for Flatpak
 - [ ] Configure Gnome
+  - [ ] Enable Minimise/Maximize buttons
   - [ ] Install and Enable Extensions
     - [ ] Dash to dock - [Gnome Extensions](https://extensions.gnome.org/extension/307/dash-to-dock/)
     - [ ] Tray Icons
@@ -13,6 +14,32 @@
     - [ ] Blur My Shell - [Gnome Extensions](https://extensions.gnome.org/extension/3193/blur-my-shell/)
     - [ ] Desktop Icons NG (DING) - [Gnome Extensions](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
     - [ ] Clipboard Indicator - [Gnome Extensions](https://extensions.gnome.org/extension/779/clipboard-indicator/)
+- [ ] Git Configuration
+  - [ ] user.name
+  - [ ] user.email
+  - [ ] core.editor (default to nano)
+- [ ] Terminal Configuration
+  - [ ] ZSH as Default
+  - [ ] OhMyZSH
+  - [ ] Powerlevel10K?
+- [ ] Install Applications
+  - [ ] Firefox - DNF
+    - [ ] (if possible) Automate configutation (Extensions, Privacy/Hardening Settings, etc.)
+  - [ ] Spotify - Flatpak
+    - Alternate client?
+  - [ ] VSCodium 
+    - [ ] Configure Extensions
+    - [ ] Configure Settings
+      - [ ] Window Bar Style > "Native"
+  - [ ] Signal Desktop
+  - [ ] Telegram Desktop
+  - [ ] Discord
+  - [ ] Thunderbird
+  - [ ] Obsidian
+  - [ ] Flatseal
+  - [ ] mpv
+  - [ ] Parabolic (yt-dlp Frontend)
+  - [ ] Gradience (Adwaita Colour Tool)
 - [ ] Per machine configuration/specifics (Main Desktop, Pixelbook Go, etc.)
   - [ ] Pixelbook Go
     - [ ] Audio Driver
