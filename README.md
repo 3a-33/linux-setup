@@ -1,5 +1,25 @@
 # My Personal Automated Setup on Fedora Workstation 
 
+### To-Do:
+- [ ] Remove all unused default Fedora programs (DNF and Flatpak)
+- [ ] Add Flathub repo for Flatpak
+- [ ] Configure Gnome
+  - [ ] Install and Enable Extensions
+    - [ ] Dash to dock (https://extensions.gnome.org/extension/307/dash-to-dock/)
+    - [ ] Tray Icons
+      - AppIndicator and KStatusNotifierItem Support (https://extensions.gnome.org/extension/615/appindicator-support/)
+      - or
+      - Tray Icons: Reloaded (https://extensions.gnome.org/extension/2890/tray-icons-reloaded/)
+    - [ ] Blur My Shell (https://extensions.gnome.org/extension/3193/blur-my-shell/)
+    - [ ] Desktop Icons NG (DING) (https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/)
+    - [ ] Clipboard Indicator (https://extensions.gnome.org/extension/779/clipboard-indicator/)
+- [ ] Per machine configuration/specifics (Main Desktop, Pixelbook Go, etc.)
+  - [ ] Pixelbook Go
+    - [ ] Audio Driver
+    - [ ] Mapping of "Assistant" Key (leftmeta?)
+  - [ ] Personal Desktop
+  - [ ] Work Laptop (Could be work specific playbooks)
+
 ### Things to note
 - The 1Password and VSCode keys and Repositories will be imported and enabled by default, even if you choose to exclude them from the package selection in the configuration.
 - 
