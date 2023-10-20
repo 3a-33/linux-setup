@@ -1,3 +1,4 @@
+---
 - name: Setup Git
   hosts: localhost
   become: true
@@ -13,10 +14,10 @@
       community.general.git_config:
         name: user.name
         scope: global
-        value: Skye
+        value: "Skye"
 
     - name: Set committer email
       community.general.git_config:
         name: user.email
         scope: global
-        value: skye@p1ca.net
+        value: "skye@p1ca.net"

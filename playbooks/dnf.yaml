@@ -1,3 +1,4 @@
+---
 - name: Setup DNF & Install Packages
   hosts: localhost
   become: true
@@ -17,13 +18,13 @@
       ansible.builtin.dnf:
         name: "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
         state: present
-        # disable_gpg_check: true (might need)
+        disable_gpg_check: true # maybe address this properly in the future?
 
     - name: DNF - Enable the RPMFusion repository (nonfree)
       ansible.builtin.dnf:
         name: "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
         state: present
-        # disable_gpg_check: true (might need)
+        disable_gpg_check: true # maybe address this properly in the future?
 
     - name: DNF - Import 1Password RPM Key
       ansible.builtin.rpm_key:
@@ -35,17 +36,6 @@
         name: 1Password
         description: 1Password Stable Channel
         baseurl: https://downloads.1password.com/linux/rpm/stable/$basearch
-
-    - name: Import VSCode RPM Key
-      ansible.builtin.rpm_key:
-        state: present
-        key: https://packages.microsoft.com/keys/microsoft.asc
-
-    - name: DNF - Add VSCode Repository
-      ansible.builtin.yum_repository:
-        name: Visual Studio Code
-        description: Visual Studio Code
-        baseurl: https://packages.microsoft.com/yumrepos/vscode
 
     - name: DNF - Remove unwanted preinstalled Fedora packages
       ansible.builtin.dnf:
@@ -81,3 +71,9 @@
           - libreoffice-writer
           - libreoffice-xsltfilter
         state: absent
+
+    - name: DNF - Install packages for Terminal
+      ansible.builtin.dnf:
+        name:
+          - zsh
+        state: present
