@@ -1,5 +1,5 @@
 ---
-# Gnome Contfiguration (playbooks/gnome.yaml) - Currently disabled due to role not working (https://github.com/PeterMosmans/ansible-role-customize-gnome/issues/32)
+# Gnome Contfiguration (playbooks/gnome.yaml) - Disabled (https://github.com/PeterMosmans/ansible-role-customize-gnome/issues/32)
 gnome_extensions:
   - id: 307
   - id: 615

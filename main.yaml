@@ -18,5 +18,5 @@
   ansible.builtin.import_playbook: playbooks/terminal.yaml
 
 # Currently disabled due to unknown bug (https://github.com/PeterMosmans/ansible-role-customize-gnome/issues/32)
-#- name: Gnome
-#  ansible.builtin.import_playbook: playbooks/gnome.yaml
+# - name: Gnome
+#   ansible.builtin.import_playbook: playbooks/gnome.yaml
