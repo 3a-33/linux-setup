@@ -1,4 +1,9 @@
-Mock modules or roles in order to pass ansible-playbook --syntax-check
+---
+# .ansible-lint
+
+profile: production
+
+# Mock modules or roles in order to pass ansible-playbook --syntax-check
 mock_modules:
   - community.general
   - community.general.flatpak_remote
