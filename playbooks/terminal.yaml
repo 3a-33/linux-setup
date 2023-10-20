@@ -1,0 +1,10 @@
+---
+- name: Configure the Terminal
+  hosts: localhost
+  become: true
+
+  tasks:
+    - name: Set users shell to use ZSH
+      ansible.builtin.user:
+        name: skye
+        shell: /bin/zsh

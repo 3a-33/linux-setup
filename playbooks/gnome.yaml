@@ -1,0 +1,7 @@
+---
+- name: Configure Gnome
+  hosts: localhost
+  become: true
+
+  roles:
+    - role: PeterMosmans.customize-gnome
