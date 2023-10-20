@@ -1,0 +1,22 @@
+---
+- name: Linux Configuration - by Skye
+  hosts: all
+  tasks:
+    - name: Import all variables from vars/default.yaml
+      ansible.builtin.include_vars: vars/default.yaml
+
+- name: DNF
+  ansible.builtin.import_playbook: playbooks/dnf.yaml
+
+- name: Flatpak
+  ansible.builtin.import_playbook: playbooks/flatpak.yaml
+
+- name: Git
+  ansible.builtin.import_playbook: playbooks/git.yaml
+
+- name: Terminal
+  ansible.builtin.import_playbook: playbooks/terminal.yaml
+
+# Currently disabled due to unknown bug (https://github.com/PeterMosmans/ansible-role-customize-gnome/issues/32)
+#- name: Gnome
+#  ansible.builtin.import_playbook: playbooks/gnome.yaml
