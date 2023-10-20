@@ -5,6 +5,7 @@ profile: production
 
 # Mock modules or roles in order to pass ansible-playbook --syntax-check
 mock_modules:
+  - community.general.flatpak
   - community.general.flatpak_remote
   - community.general.git_config
 mock_roles:
