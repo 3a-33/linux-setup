@@ -1,6 +1,8 @@
 # .github/workflows/ansible-lint.yaml
 name: ansible-lint
 on:
+  workflow_dispatch:
+
   push:
     branches: ["main"]
 jobs:
